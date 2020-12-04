@@ -1,0 +1,290 @@
+body {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 200;
+  text-align: center;
+}
+
+h2 {
+  margin: 0px;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.43;
+  margin: 0;
+}
+
+header {
+  margin: 5px;
+  font-size: 10px;
+}
+
+#playersearchdiv {
+  text-align: center;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type=search] {
+  background: #ffffff url(img/search-icon.png) no-repeat 9px center;
+  border: solid 1px #ccc;
+  padding: 9px 10px 9px 32px;
+  width: 200px;
+
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+
+input[type=search]:focus {
+  width: 230px;
+  background-color: #fff;
+  border-color: #6dcff6;
+
+  -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+  box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+}
+
+#playerpanelarea {
+  font-size: 16px;
+}
+
+#playerinfoarea {
+  width: 69%;
+  padding-left: 4px;
+}
+
+#playerimgarea {
+  width: 29%;
+}
+
+#playerimgarea img {
+  width: 100%;
+}
+
+#playerimgarea, #playerinfoarea {
+  float: left;
+}
+
+#fixedscalearea, #pergamearea, #weeklyarea {
+  float: left;
+  width: 50%;
+  padding-bottom: 8px;
+}
+
+#leftcontrol, #rightcontrol {
+  float: left;
+}
+
+#leftcontrol {
+  width: 40%;
+}
+
+#rightcontrol {
+  width: 60%;
+}
+
+#yearsliderarea {
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+
+#yearslider {
+  width: 90%;
+  margin: auto;
+}
+
+#highvalue {
+  float: right;
+}
+
+#lowvalue {
+  float: left;
+}
+
+#lowvalue, #highvalue {
+  padding-top: 4px;
+} 
+
+.grapharea {
+  font-size: 14px;
+  /*
+  margin: auto;
+  */
+}
+
+.flex {
+  box-sizing: border-box;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+
+  margin: 0;
+  padding: 0;
+}
+
+.flex, .flex:before, .flex:after {
+  box-sizing: inherit;
+}
+
+.box {
+  width: 100%;
+  margin: 8px;
+  background: white;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+
+@media only screen and (min-width: 600px) {
+    .container { width: 590px; } 
+    header { 
+      background-size: cover;
+      background-position: bottom center;
+      margin-top: 0;
+      color: initial;
+      font-size: 20px;
+    }
+    header div {
+      padding-top: 60px;
+    }
+    header p {
+      max-width: 50%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .container { width: 750px; } 
+    header { 
+      background-size: cover;
+      background-position: bottom center;
+      margin-top: 0;
+      color: initial;
+      font-size: 20px;
+    }
+    header div {
+      padding-top: 60px;
+    }
+    header p {
+      max-width: 50%;
+    }
+    #buttonlink {
+      display: inline;
+    }
+    nav {
+      position:absolute; 
+    left:-10000px; 
+    top:auto; 
+    width:1px; 
+    height:1px; 
+    overflow:hidden;
+    }
+    #featureflex {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #featureflex li {
+    display: flex; 
+    flex-basis: 46%;  
+    flex-direction: column;
+  }
+  #featureflex h3 {
+    margin: 10px;
+  }
+  .featuresvg {
+    width: initial;
+    float: none;
+    height: initial;
+  }
+
+  .featuredesc {
+    width: initial;
+    float: none;
+    padding-left: 0px;
+    text-align: center;
+  }
+  #copy {
+    float: left;
+    width: 30%;
+  }
+  #icons {
+    float: right;
+    width: 40%;
+  }
+  #cc {
+    float: left;
+    width: 90%;
+  }
+}
+@media (min-width: 992px) {
+    .container { width: 970px; } 
+    header { 
+      background-size: cover;
+      background-position: bottom center;
+      font-size: 22px;
+    }
+    #usesflex {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #usesflex li {
+    flex-basis: 46%;  
+    flex-direction: column;
+  }
+
+  #testflex li {
+    flex-basis: 33%;
+  }
+}
+@media (min-width: 1200px) {
+    .container { width: 1170px; } 
+    header { 
+      background-size: cover;
+      background-position: bottom center;
+      font-size: 24px;
+    }
+  #featureflex li { 
+    flex-basis: 23%;  
+  }
+}

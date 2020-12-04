@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Lookup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,300i' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="multipleline.css">
+    <link rel="stylesheet" type="text/css" href="graphstyle.css">
+    <link rel="stylesheet" type="text/css" href="formwrapper.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="linegraph.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+    <script src="client.js"></script>
+  </head>
+  <body>
+    <header role="banner" class="container">
+      <h1>Fantasy Football Player Lookup</h1>
+    </header>
+
+    <div id="playersearchdiv" class="container">
+      <!--
+      <form class="form-wrapper cf" id="playersearcharea">
+        <input type="text" id="playersearch" placeholder="Search players..." required>
+        <button type="submit">Search</button>
+      </form>
+      -->
+      <form id="playersearcharea">
+        <input id="playersearch" type="search" placeholder="Search" autocomplete="off" autocorrect="off">
+      </form>
+    </div>
+
+    <div id="panelplayerdiv" class="container">
+      <ul id="playerpanelarea" class="flex">
+        <li id="playerarea" class="box">
+          <!--
+          <div id="playerimgarea">
+            <img src="http://www.sports-logos-screensavers.com/user/NFL_Logo_New.jpg" alt="Player Picture">
+          </div>-->
+          <div id="playerinfoarea">
+            <h2 id="playername"></h2>
+            <!--
+            <p id="playerteam">Team: Broncos</p>
+            <p id="playerage">Age: 42</p>-->
+          </div>
+        </li>
+        <li id="controlpanel" class="box">
+          <div id="leftcontrol">
+            <div id="fixedscalearea">
+              <input type="checkbox" id="fixedscale" checked />Fixed Scale
+            </div>
+            <div id="pergamearea">
+              <input type="checkbox" id="pergame" />Per Game
+            </div>
+            <!--
+            <div id="weeklyarea">
+              <input type="checkbox" id="weekly" />Weekly
+            </div>-->
+          </div>
+          <div id="rightcontrol">
+            <div id="yearsliderarea">
+              <p>
+                Years: <span id="minyear"></span> - <span id="maxyear"></span>
+              </p>
+              <div id="yearslider"></div>
+              <span id="lowvalue">&nbsp;</span><span id="highvalue">&nbsp;</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="graphsdiv" class="container">
+      <div id="graphsarea" class="row">
+        <!--
+        <li class="card">
+          <div class="featuresvg">
+
+          </div>
+        </li>
+        -->
+      </ul>
+    </div>
+  </body>
+</html>
